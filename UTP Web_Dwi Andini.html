@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Dwi Andini</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      color: black;
+    }
+    .navbar { background-color: #f97316; }
+    .navbar a { color: white !important; font-weight: bold; }
+    .hero, .section-full {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero::before, .section-full::before {
+      content: ""; position: absolute; top: 0; left: 0;
+      height: 100%; width: 100%; background-color: rgba(255,255,255,0.8); z-index: 1;
+    }
+    .hero > div, .section-full > .container { position: relative; z-index: 2; }
+    .hero h1 { font-size: 4rem; font-weight: bold; color: black; }
+    .hero p { font-size: 1.5rem; color: black; }
+    .section { padding: 4rem 0; }
+    .profile-img { width: 100%; border-radius: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .card:hover { transform: scale(1.05); transition: 0.3s ease; }
+    footer { background-color: #f97316; color: white; padding: 1rem 0; text-align: center; }
+    .btn-custom { background-color: #f97316; color: white; font-weight: bold; }
+    .btn-custom:hover { background-color: #d65a00; }
+    .profile-section { padding: 5rem 0; }
+    .profile-content { text-align: justify; color: black; }
+    .social-icons a { font-size: 2rem; margin: 0 15px; color: #f97316; transition: color 0.3s; }
+    .social-icons a:hover { color: #d65a00; }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Dwi Andini</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome Dwi Andini</h1>
+      <p>We build creative digital solutions</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section-full" id="about">
+    <div class="container profile-section">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <img src="https://media.istockphoto.com/id/802291322/id/foto/gadis-cantik-dengan-rambut-merah-panjang-dikepang-dengan-kepang-prancis-di-salon-kecantikan.jpg?s=1024x1024&w=is&k=20&c=HMsE91v8u0Y6bfIGBGl50INC62yCzqzlBmn1YKwFpCA=" alt="Profile Dwi Andini" class="profile-img">
+        </div>
+        <div class="col-md-8">
+          <h2>About Us</h2>
+          <p class="profile-content">Perkenalkan, saya Dwi Andini, seorang yang memiliki minat besar dalam pengembangan web dan selalu bersemangat untuk belajar serta menciptakan sesuatu yang menarik melalui teknologi. Saya juga memiliki minat yang kuat dalam desain UI/UX, dan selalu berusaha memberikan pengalaman pengguna yang menyenangkan dan fungsional.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section-full" id="education">
+    <div class="container">
+      <h2 class="text-center mb-5">Education</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-4 text-center">
+            <i class="fa fa-school fa-2x mb-3"></i>
+            <h5>SMP Negeri 1 Ambarawa</h5>
+            <p>Lulus tahun 2020</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 text-center">
+            <i class="fa fa-building fa-2x mb-3"></i>
+            <h5>SMA Negeri 1 Ambarawa</h5>
+            <p>Jurusan IPA - Lulus tahun 2023</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 text-center" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#sertifikatModal">
+            <i class="fa fa-university fa-2x mb-3"></i>
+            <h5>Universitas Lampung</h5>
+            <p>Ilmu Komputer - 2023 - Sekarang</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section-full" id="services">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="https://www.figma.com/design/QOQrR8xtsXx2yDt7d4rTJs/Unimart?node-id=0-1&p=f&t=u9gV915DujgW7rP2-0" target="_blank" class="text-decoration-none text-reset">
+            <div class="card p-4 text-center">
+              <i class="fa fa-laptop fa-2x mb-3"></i>
+              <h4>Figma</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://yourdomain.com/python-app.html" target="_blank" class="text-decoration-none text-reset">
+            <div class="card p-4 text-center">
+              <i class="fa fa-mobile-alt fa-2x mb-3"></i>
+              <h4>Python</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://yourdomain.com/cpp-app.html" target="_blank" class="text-decoration-none text-reset">
+            <div class="card p-4 text-center">
+              <i class="fa fa-paint-brush fa-2x mb-3"></i>
+              <h4>C++</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-full" id="favorites">
+    <div class="container">
+      <h2 class="text-center mb-5">Favorite Songs</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2FaquTc3FYvNm7RuO1gD6O?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3nHxZEe1dT7zs73DG6pNll?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1AoBdDIOp6RFjAbzcPbWi8?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="sertifikatModal" tabindex="-1" aria-labelledby="sertifikatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sertifikat Dwi Andini</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="max-height:75vh; overflow-y:auto;">
+          <img src="https://i.imgur.com/rWTgxmY.jpg" class="img-fluid mb-3 rounded shadow" alt="Sertifikat 1">
+          <img src="https://i.imgur.com/1r37JK3.jpg" class="img-fluid mb-3 rounded shadow" alt="Sertifikat 2">
+          <img src="https://i.imgur.com/tYShdt3.jpg" class="img-fluid mb-3 rounded shadow" alt="Sertifikat 3">
+          <img src="https://i.imgur.com/ir23HiR.jpg" class="img-fluid mb-3 rounded shadow" alt="Sertifikat 4">
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary" onclick="kembaliKeEducation()">Kembali ke Education</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section-full" id="contact">
+    <div class="container">
+      <h2 class="text-center mb-5">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+  
+          <div class="mt-4 text-center">
+            <p>
+              <a href="https://www.tiktok.com/@fake_5025?_t=ZS-8vjvxuW19ub&_r=1" target="_blank" class="btn btn-outline-danger me-2">
+                <i class="fab fa-tiktok"></i> @fake_5025
+              </a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/andiniiiii01_?igsh=aWs4MjNpOWJsd2R1" target="_blank" class="btn btn-outline-dark me-2">
+                <i class="fab fa-instagram"></i> @andiniiiii01_
+              </a>
+            </p>
+            <p>
+              <a href="mailto:andinii0204@gamil.com?subject=Contact%20from%20Website&body=Hello%20Andini," class="btn btn-outline-primary me-2">
+                <i class="fas fa-envelope"></i> andinii0204@gamil.com
+              </a>
+            </p>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <iframe style="width:100%; height:300px; border:0;" 
+                  src="https://maps.google.com/maps?q=bandar lampung&t=&z=13&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 Dwi Andini Company. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function kembaliKeEducation() {
+      const modalEl = document.getElementById('sertifikatModal');
+      const modal = bootstrap.Modal.getInstance(modalEl);
+      modal.hide();
+      setTimeout(() => {
+        document.getElementById('education').scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  </script>
+</body>
+
+</html>
